@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS userdb;
+
+USE userdb;
+
+CREATE TABLE `usertable` (
+	`userId` INT(11) NOT NULL AUTO_INCREMENT,
+	`user` VARCHAR(45) NOT NULL DEFAULT '',
+	`password` VARCHAR(100) NOT NULL DEFAULT '',
+	PRIMARY KEY (`userId`)
+)
+COLLATE='latin1_swedish_ci'ENGINE=InnoDB AUTO_INCREMENT=3;

@@ -29,3 +29,13 @@ Para ejecutar el proyecto seguir los siguientes pasos:
     "user": "Daniel",
     "password": "12345"
 }`
+
+## Docker
+
+Si desea ejecutar el proyecto con docker, no es necesario crear BD ni tabla, solamente ejecutar los comandos de docker-compose pertinentes.
+
+- docker-compose up (ejecuta el proyecto)
+
+- docker-compose down (detiene la ejecucion del proyecto)
+
+- docker-compose build (necesario para reconstruir la imagen de la app si se modificaron los archivos)

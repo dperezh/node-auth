@@ -19,7 +19,7 @@ const db = mysql.createPool({
     connectionLimit: 100,
     host: DB_HOST,
     user: DB_USER,
-    //password: DB_PASSWORD;
+    password: DB_PASSWORD,
     database: DB_DATABASE,
     port: DB_PORT
 });
@@ -80,7 +80,7 @@ app.post("/login", (req, res) => {
 
     db.getConnection(async (err, connection) => {
         if (err) throw (err);
-        const sqlSearch = "Select * from userTable where user = ?";
+        const sqlSearch = "Select * from usertable where user = ?";
         const search_query = mysql.format(sqlSearch, [user]);
 
         await connection.query(search_query, async (err, result) => {
